@@ -173,22 +173,22 @@ byte vOSz(Period* periodusok[], byte pSz, byte eH, byte eM) {
 // }
 
 // Ha String helyett const char* lenne a típus akkor ezt a formát használhatnád: if (strcmp(napok[i]->date.c_str(), datum.c_str()) == 0)
-String napNev(const String& datum) {
-  String normalizedDatum = datum;
-  normalizedDatum.replace(".", "-");
+// String napNev(const String& datum) {
+//   String normalizedDatum = datum;
+//   normalizedDatum.replace(".", "-");
 
-  for (int i = 0; i < 5; i++) {
-    if (napok[i] == nullptr) continue;
+//   for (int i = 0; i < 5; i++) {
+//     if (napok[i] == nullptr) continue;
 
-    String d = napok[i]->date;
-    d.replace(".", "-");
+//     String d = napok[i]->date;
+//     d.replace(".", "-");
 
-    if (normalizedDatum.equals(d)) {
-      return napok[i]->name;
-    }
-  }
-  return "Nincs adat...";
-}
+//     if (normalizedDatum.equals(d)) {
+//       return napok[i]->name;
+//     }
+//   }
+//   return "Nincs adat...";
+// }
 
 int kozepKezdes(int racskezd, int racsveg, int szovegHossz) {
   return (((racsveg + racskezd) / 2) - (szovegHossz / 2));

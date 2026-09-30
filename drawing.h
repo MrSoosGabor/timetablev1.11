@@ -92,6 +92,19 @@ void lessonWrite(Card* kartya, int kozepe, byte kSSz, byte vSSz, byte fajta, byt
   }
 }
 
+String getDayNameByIndex(byte dayOfWeek) {
+  const String napNevek[] = {
+    "Vasárnap", "Hétfő", "Kedd", "Szerda",
+    "Csütörtök", "Péntek", "Szombat"
+  };
+
+  if (dayOfWeek >= 0 && dayOfWeek <= 6) {
+    return napNevek[dayOfWeek];
+  }
+
+  return "Nincs adat...";
+}
+
 void lessonWindow(byte targyDb) {
   uint16_t y;
   uint16_t kezdoOraSzam;  // A tényleges kezdő óraszámot tartalmazza (pl. ha a 2. és 3. órában van egy dupla óra, akkor ez 2)                       (pl.: ha a 6. és 7. órában van egy dupla óra, akkor ez 6)
@@ -110,8 +123,9 @@ void lessonWindow(byte targyDb) {
   // Napnév és dátum kiírása (A napnév helyére kerül a hibaüzenet kiírása)
   u8g2Fonts.setFont(u8g2_font_ncenB18_te);  // select u8g2 font from here: https://github.com/olikraus/u8g2/wiki/fntlistall
   if (errorCode == 0) {
-    u8g2Fonts.setCursor(kozepKezdes(time_racs_szel, display.width(), u8g2Fonts.getUTF8Width(napNev(datumJo).c_str())), 25);
-    u8g2Fonts.print(napNev(datumJo));
+    String nap = getDayNameByIndex(hetAktNapSzama);
+    u8g2Fonts.setCursor(kozepKezdes(time_racs_szel, display.width(), u8g2Fonts.getUTF8Width(nap.c_str())), 25);
+    u8g2Fonts.print(nap);
   }
   else {
     u8g2Fonts.setCursor(kozepKezdes(time_racs_szel, display.width(), u8g2Fonts.getUTF8Width(errorMessages[errorCode].c_str())), 25);
