@@ -1,0 +1,11 @@
+NEM KELL 1. Az ébredési idők eltolása az egyes termeknél, hogy ne egyszerre legyen a frissítés.
+	Az eredeti fél 8-as ébredés előtt az egyes termekhez tartozó órarendek Teremszam*20 mp-cel előbb ébredjenek.
+	Pl.: A 303 terem 303*20=6060 mp = 101 perccel fél 8 előtt, vagyis 6 óra előtt 11 perccel, 5 óra 49 perckor ébred
+
+2. Szünetek kezelése: Ha a Wifi kapcsolat létrejön, de nincs letölthető adat, akkor ne próbálkozzon 1 óra múlva, csak másnap.
+
+KÉSZ 3. Az OTA frissítést meg kell valósítani, vagyis Wifi-n keresztül kell a firmware-t frissíteni, ha egy fájlban lévő verziószám
+	újabb, mint a jelenlegi, akkor az ébredés után csak a frissítés fusson le, majd induljon újra.
+
+KÉSZ 4. A grafikon y tengelyén az elemfeszültség legyen Voltban megadva. Jó lenne látni egy külön oszlopban a frissítési időket is.
+

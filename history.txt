@@ -1,0 +1,5 @@
+1.0  - Automatikus frissítés wifi-n keresztül (OTA), elemfeszültségek megjelenítése Google táblázatban
+1.01 - GPIO inicializálás kijavítása (D8 és A0)
+1.02 - WiFi hiba kezelése (20 mp-ig próbálkozik csak csatlakozni, ha nem sikerül, akkor alszik 1 napot)
+1.03 - A setTimeToSleep() átírása, verziószám kiírása alul
+1.1  - Több WiFi hálózaton is próbálkozik, Szülői értekezlet (oratol = -99) már jól jelenik meg, akku figyelmeztetés kiírása a kijelzőre

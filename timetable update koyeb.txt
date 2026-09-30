@@ -1,0 +1,10 @@
+0. A kiadásra szánt verzió elkészítése
+1. A config.h FW_VERSION változó átírása a megfelelő verziószámmal
+2. Az Arduino IDE Sketch menüponton belül az Export Compiled Binary menüpont segítségével a timetablevx.y.ino.bin legenerálása
+3. Ezt a fájlt át kell nevezni update.bin-re (koyeb) vagy timetable.ino.bin-re (jedlik.eu)
+4. A version fájlba be kell írni a megfelelő verzió számot, ami az FW_VERSION-ban is van
+5. Az update.bin és version fájlokat fel kell tölteni a backend szerverre
+   5.a PUT https://added-dell-jedlik-c6786fd9.koyeb.app/update (A bodyban: form->Form Data->Type: File->Key: src->Value: update.bin)
+   5.b PUT https://added-dell-jedlik-c6786fd9.koyeb.app/update (A bodyban: form->Form Data->Type: File->Key: src->Value: version)
+
+A http://zeus.jedlik.eu:8000 lehet, hogy csak az iskolán belül érhető el, és ide timetable.ino.bin néven kell feltölteni az új verzió binárisát

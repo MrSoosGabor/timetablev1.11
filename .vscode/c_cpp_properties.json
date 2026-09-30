@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "ESP32",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/fontos",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.5\\cores\\esp32",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.5\\cores\\esp32\\**",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.5\\variants\\**",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.5\\libraries\\**",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2511\\include",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2511\\xtensa-esp-elf\\include",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.5-9bb7aa84-v2\\esp32\\include\\**",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.5-9bb7aa84-v2\\esp32\\qio_qspi\\include",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.5-9bb7aa84-v2\\esp32c6\\include\\**",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.5-9bb7aa84-v2\\esp32c6\\qio_qspi\\include",
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\libraries\\**",
+                "C:\\Users\\malag\\Documents\\Arduino\\libraries\\**"
+            ],
+            "defines": [
+                "ESP32",
+                "CONFIG_IDF_TARGET_ESP32",
+                "ARDUINO_ARCH_ESP32",
+                "ARDUINO=10607"
+            ],
+            "forcedInclude": [
+                "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.5\\cores\\esp32\\Arduino.h"
+            ],
+            "compilerPath": "C:\\Users\\malag\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2511\\bin\\xtensa-esp32-elf-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x86"
+        }
+    ],
+    "version": 4
+}

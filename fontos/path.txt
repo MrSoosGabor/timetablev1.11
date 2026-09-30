@@ -1,0 +1,28 @@
+c:\Users\malag\Documents\Arduino\libraries\ESP_SSLClient\src\client\Helper.h
+
+1. Arduino IDE teljes bezárása
+
+Zárd be az IDE-t minden ablakával együtt.
+
+Ellenőrizd a Feladatkezelőben is, hogy nincs futó arduino.exe.
+
+2. Build cache törlése (kötelező)
+Töröld ezt a mappát:
+C:\Users\malag\AppData\Local\Temp\arduino
+
+
+Ha nincs ilyen, töröld:
+
+C:\Users\malag\AppData\Local\Temp\arduino-sketch-*
+
+
+Ez a fordítási cache, itt ragad bent a rossz include-ág.
+
+3. ESP32 core maradvány ellenőrzése (egyszeri, de fontos)
+
+Nyisd meg:
+
+C:\Users\malag\AppData\Local\Arduino15\packages\esp32\hardware\esp32
+
+
+Itt csak egy mappa legyen:
