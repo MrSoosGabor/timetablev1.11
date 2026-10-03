@@ -92,19 +92,6 @@ void lessonWrite(Card* kartya, int kozepe, byte kSSz, byte vSSz, byte fajta, byt
   }
 }
 
-String getDayNameByIndex(byte dayOfWeek) {
-  const String napNevek[] = {
-    "Vasárnap", "Hétfő", "Kedd", "Szerda",
-    "Csütörtök", "Péntek", "Szombat"
-  };
-
-  if (dayOfWeek >= 0 && dayOfWeek <= 6) {
-    return napNevek[dayOfWeek];
-  }
-
-  return "Nincs adat...";
-}
-
 void lessonWindow(byte targyDb) {
   uint16_t y;
   uint16_t kezdoOraSzam;  // A tényleges kezdő óraszámot tartalmazza (pl. ha a 2. és 3. órában van egy dupla óra, akkor ez 2)                       (pl.: ha a 6. és 7. órában van egy dupla óra, akkor ez 6)

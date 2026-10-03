@@ -163,32 +163,18 @@ byte vOSz(Period* periodusok[], byte pSz, byte eH, byte eM) {
   return vegOra;
 }
 
-// String napNev(String datum) {
-//   for (int i = 0; i < 5; i++) {
-//     if (napok[i]->date == datum) {
-//       return napok[i]->name;
-//     }
-//   }
-//   return "Nincs adat...";
-// }
+String getDayNameByIndex(byte dayOfWeek) {
+  const String napNevek[] = {
+    "Vasárnap", "Hétfő", "Kedd", "Szerda",
+    "Csütörtök", "Péntek", "Szombat"
+  };
 
-// Ha String helyett const char* lenne a típus akkor ezt a formát használhatnád: if (strcmp(napok[i]->date.c_str(), datum.c_str()) == 0)
-// String napNev(const String& datum) {
-//   String normalizedDatum = datum;
-//   normalizedDatum.replace(".", "-");
+  if (dayOfWeek >= 0 && dayOfWeek <= 6) {
+    return napNevek[dayOfWeek];
+  }
 
-//   for (int i = 0; i < 5; i++) {
-//     if (napok[i] == nullptr) continue;
-
-//     String d = napok[i]->date;
-//     d.replace(".", "-");
-
-//     if (normalizedDatum.equals(d)) {
-//       return napok[i]->name;
-//     }
-//   }
-//   return "Nincs adat...";
-// }
+  return "Nincs adat...";
+}
 
 int kozepKezdes(int racskezd, int racsveg, int szovegHossz) {
   return (((racsveg + racskezd) / 2) - (szovegHossz / 2));
