@@ -96,7 +96,7 @@ void setTimeToSleep() {
   }
 }
 
-
+// Visszaadja, hogy az adott kezdési időpont melyik óraszámnak felel meg a csengetési rend szerint, vagyis a periodusok tömbben hányadik elemnek felel meg.
 byte kOSz(Period* periodusok[], byte pSz, byte sH, byte sM) {
   String start;
   byte startH;                  // Csengetési rend szerinti tanóra kezdési időpontjának óra része
@@ -131,6 +131,7 @@ byte kOSz(Period* periodusok[], byte pSz, byte sH, byte sM) {
   return kezdoOra;
 }
 
+// Visszaadja, hogy az adott befejezési időpont melyik óraszámnak felel meg a csengetési rend szerint, vagyis a periodusok tömbben hányadik elemnek felel meg.
 byte vOSz(Period* periodusok[], byte pSz, byte eH, byte eM) {
   String end;
   byte endM;
@@ -163,6 +164,7 @@ byte vOSz(Period* periodusok[], byte pSz, byte eH, byte eM) {
   return vegOra;
 }
 
+// Visszaadja a hét napjának nevét a hetAktNapSzama alapján
 String getDayNameByIndex(byte dayOfWeek) {
   const String napNevek[] = {
     "Vasárnap", "Hétfő", "Kedd", "Szerda",
